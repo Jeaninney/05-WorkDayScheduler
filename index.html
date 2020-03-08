@@ -8,7 +8,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Added link to the Moment.js -->
 <script src="./moment.min.js"></script>
-
+<!-- Adding Fontawesome for my lock icon -->
+<script src="https://kit.fontawesome.com/a2a5b26d68.js" crossorigin="anonymous"></script>
 <!-- Added a link to Bootstrap-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Handlee|Josefin+Sans&display=swap" rel="stylesheet">
@@ -21,16 +22,58 @@
 <body>
     <header><h1>Jeaninney's Work Day Scheduler</h1>
         A simple calendar for scheduling your work day
+        <h2 class="today">Today</h2>
         <!-- Date goes here -->
     </header>
 <form>
     <div class="container">
         <div class="row" id="9am">
-            <figure class = "col-1 text-justify p-3 mb-0 bg-primary text-white">9am</figure>
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">9am</div>
             <textarea class = "col-10" rows = "2" id = "9am"> </textarea>
-            <button class = "col-1">Lock</button>
-            </div>
-            </div>
+            <button class = "col-1 fas fa-lock"></button>
+            <!-- <i class="fas fa-lock"></i> -->
+        </div>
+        <div class="row" id="10am">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">10am</div>
+            <textarea class = "col-10" rows = "2" id = "10am"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="11am">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">11am</div>
+            <textarea class = "col-10" rows = "2" id = "11am"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="12pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">12pm</div>
+            <textarea class = "col-10" rows = "2" id = "12pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="1pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">1pm</div>
+            <textarea class = "col-10" rows = "2" id = "1pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="2pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">2pm</div>
+            <textarea class = "col-10" rows = "2" id = "2pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="3pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">3pm</div>
+            <textarea class = "col-10" rows = "2" id = "3pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="4pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">4pm</div>
+            <textarea class = "col-10" rows = "2" id = "4pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+        <div class="row" id="5pm">
+            <div class = "col-1 text-justify p-3 mb-0 bg-primary text-white">5pm</div>
+            <textarea class = "col-10" rows = "2" id = "5pm"> </textarea>
+            <button class = "col-1 fas fa-lock"></button>
+        </div>
+    </div>
 
 </form>
 
