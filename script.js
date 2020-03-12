@@ -5,7 +5,6 @@
 //present is .bg-warning
 //future is .bg-success
 $(function () {
-var availTimes = [9,10,11,12,13,14,15,16,17]
 
 var now = moment();
 $("#today").text(now.format("dddd, MMMM Do YYYY"));
@@ -13,17 +12,17 @@ $("#today").text(now.format("dddd, MMMM Do YYYY"));
 var currenthour = now.format("H");
 
 function init(){
-
+    //cycling through each of the scheduling blocks and setting their
+    //color based on the time 
     $(".hourblocktext").each(function (index) {
         var thisvalue = $(this).attr("value");
-        console.log(thisvalue);
-        console.log(currenthour);
+        
+        // console.log(thisvalue);
+        // console.log(currenthour);
+
         //this if will make the block of time that matches the current hour yellow
         if (currenthour == thisvalue) {
-            console.log("We have a match.");
-            console.log($(this).attr("class"));
             $(this).addClass("bg-warning");
-            console.log($(this).attr("class"));
         }
         //this will make time blocks in the past turn dark grey
         else if (currenthour < thisvalue) {
@@ -31,19 +30,79 @@ function init(){
         }
         //this will make time blocks in the future green
         else {
-            $(this).addClass("bg-dark");
+            $(this).addClass("text-light bg-dark");
         }
-       
+        
+        var whichEntry = $(this).attr("which");
+        //setting the value of the entry to show what is stored locally
+        var storedText = localStorage.getItem(whichEntry);
+        console.log(whichEntry);
+        if (storedText != null){
+            
+            $(this).text(storedText);
+        }
+        
         // $(".hourblocktext").text = localStorage.getItem()
 
     } )
 }
 init();
-// $(".hourblock").on ("click", function (event) {
-//     event.preventDefault;
-//     // alert(this).text;
-//     // console.log( index + ": " + $( this ).text() );
-//     var storedEvent = localStorage.getItem((this).val)
-// })
+
+$("button").on("click", function (event) {
+    event.preventDefault();
+    var whichEntry = $(this).attr("which");
+    console.log(whichEntry);
+    
+    if (whichEntry == "9am"){
+        var store = $("#nine");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "10am"){
+        var store = $("#ten");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "11am"){
+        var store = $("#eleven");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "12pm"){
+        var store = $("#twelve");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "1pm"){
+        var store = $("#one");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "2pm"){
+        var store = $("#two");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "3pm"){
+        var store = $("#three");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else if (whichEntry == "4pm"){
+        var store = $("#four");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+    else {
+        var store = $("#five");
+        console.log(store.val());
+        localStorage.setItem(whichEntry, store.val());
+    }
+
+
+
+
+})
+
 
 })
