@@ -69,7 +69,7 @@ $("button").on("click", function (event) {
         localStorage.setItem(whichEntry, store.val());
     }
     else if (whichEntry == "12pm"){
-        var store = $("#twelve");
+        var store = $("#noon");
         console.log(store.val());
         localStorage.setItem(whichEntry, store.val());
     }
